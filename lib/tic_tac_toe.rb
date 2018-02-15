@@ -36,7 +36,15 @@ class TicTacToe
   end
   
   def valid_move?(position)
-    position < @board.length && !position_taken?(position)
+    if Integer(position) rescue false
+      if position < @board.length
+        if !position_taken?(position)
+          true 
+        end
+      end
+    else
+      false
+    end
   end
   
   def turn_count
