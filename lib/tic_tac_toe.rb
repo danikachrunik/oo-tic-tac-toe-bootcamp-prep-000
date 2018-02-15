@@ -59,7 +59,7 @@ class TicTacToe
     puts "Please enter a position from 1 to 9:"
     input = gets.strip
     
-    if Integer(input) rescue nil
+    if Integer(input) rescue turn
       position = input_to_index(input)
         
       if valid_move?(position)
