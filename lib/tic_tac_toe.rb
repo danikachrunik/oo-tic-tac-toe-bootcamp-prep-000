@@ -42,8 +42,6 @@ class TicTacToe
           true 
         end
       end
-    else
-      false
     end
   end
   
