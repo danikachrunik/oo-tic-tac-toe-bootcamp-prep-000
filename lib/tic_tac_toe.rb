@@ -36,7 +36,7 @@ class TicTacToe
   end
   
   def valid_move?(position)
-    if position <= @board.length && position > 0
+    if position <= @board.length
       if !position_taken?(position)
         true 
       end
@@ -60,7 +60,7 @@ class TicTacToe
     input = gets.strip
     position = input_to_index(input)
     
-    if valid_move?(position)
+    if position >= 0 && valid_move?(position)
       move(position, current_player)
       display_board
     else
